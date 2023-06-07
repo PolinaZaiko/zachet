@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заико Полина Зачет</title>
+
+    <script>
+        function calculate() {
+            let day = document.getElementById("day").value;
+            let result = "день номер " + day + ": ";
+            switch (day) {
+                case "1":
+                result += "понедельник";
+                case "2":
+                result += "вторник";
+                case "3":
+                result += "среда";
+                case "4":
+                result += "четверг";
+                case "5":
+                result += "пятница";
+                case "6":
+                result += "суббота";
+                case "7":
+                result += "воскресенье";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function reset() {
+            document.getElementById("day").value = "1";
+            document.getElementById("result").innerHTML = "";
+        }
+        
+    </script>
+
+    <style>
+        div {
+            margin-bottom: 15px;
+            margin-left: 15px;
+        }
+
+        p {
+            border: 1px solid;
+            margin: 10px 10px 10px 10px;
+            width: 375px;
+            height: 50px;
+        }
+
+        form {
+            margin: 20px;
+            border: 1px solid;
+            width: 400px;
+            height: 300px;
+        }
+
+        .button1 {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            margin: 7px;
+            transition-duration: 0.3s;
+        }
+
+        .button2 {
+            background: linear-gradient(red, yellow, green);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 16px;
+            margin: 60px 10px 0px 140px;
+            transition-duration: 0.3s;
+        }
+
+        button:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        .button2:active {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main>
+        <form>
+            <p id="result"></p>
+
+            <div><button class="button1" onclick="calculate()">Рассчитать</button></div>
+
+            <label style="margin-left: 25px;" for="day"></label>
+                <select id="day">
+                    <option value="1">Понедельник</option>
+                    <option value="2">Вторник</option>
+                    <option value="3">Среда</option>
+                    <option value="4">Четверг</option>
+                    <option value="5">Пятница</option>
+                    <option value="6">Суббота</option>
+                    <option value="7">Воскресенье</option>
+                </select><br>
+
+            <button class="button2" onclick="reset()" id="resetBtn">Сбросить</button><br>
+
+        </form>
+    </main>
+
+    <footer> 
+    </footer>
+</body>
+</html>

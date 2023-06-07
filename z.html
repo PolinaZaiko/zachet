@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Калькулятор</title>
+    <script>
+
+   </script>
+    <style>
+        form {
+            margin: 20px;
+            border: 1px solid;
+            width: 400px;
+            height: 200px;
+            text-align: center;
+        }
+
+        input {
+            margin: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px rgba(126, 130, 141, 0.3);
+        }
+
+        button {
+            margin: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .sum {
+            background-color: blue;
+            color: white;
+        }
+
+        .diff {
+            background-color: blue;
+            color: white;
+        }
+
+        .reset {
+            background-color: red;
+            color: white;
+        }
+
+        button:hover {
+            background-color: darkblue;
+            color: white;
+        }
+
+        button:active {
+            box-shadow: none;
+        }
+
+        .result {
+            margin: 30px 20px 0px 88px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            font-size: 20px;
+            text-align: center;
+            width: 200px;
+
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <form>
+            <input type="number" id="num1" placeholder="Введите первое число">
+            <input type="number" id="num2" placeholder="Введите второе число">
+            <button class="sum" onclick="calculate('sum')">Сумма</button>
+            <button class="diff" onclick="calculate('diff')">Разность</button>
+            <button class="reset" onclick="reset()">Сбросить</button>
+            <div class="result" id="result"></div>
+        </form>
+
+    </main>
+</body>
+</html>
